@@ -1,0 +1,118 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    display:flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    background-color: $main-color;
+    font-family: 'Exo 2', sans-serif; 
+    overflow: hidden;
+}
+
+#app{
+    display:flex;
+    flex-direction: column;
+    flex: 0 1 100vh;
+}
+
+.slug{
+    display:flex;
+    height:100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+
+    &__text{
+        font-size: 36px;
+        line-height: 48px;
+        color: #9c9b9b;
+        font-weight: 800;
+        font-family: "Exo 2";
+        text-align: center;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.header{
+    display: flex;
+    height:$header-height;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: initial;
+    background-color: #363636;
+}
+
+.avatar{
+    width:50px;
+    height:50px;
+    margin: 20px;
+}
+
+.avatar__img{
+    width:60px;
+    height:50px;
+}
+
+.main{
+    display:flex;
+    flex-direction: row;
+    flex: 1 0 100%;
+    
+}
+
+.chatlist{
+    display:flex;
+    flex-direction: column;
+    width:400px;
+    height:calc( 100vh - #{$header-height} );
+    box-sizing: border-box;
+    padding: 0 20px;
+    padding-top: 20px;
+    border-right: 1px solid #cccccc;
+    overflow-y: auto;
+
+}
+
+.chatlist::-webkit-scrollbar{
+    width:8px;
+    background-color:#cbcbcb;
+}
+
+.chatlist::-webkit-scrollbar-thumb{
+    background-color:rgb(119, 116, 116);
+    width: 5px;
+    border-radius: 12px;
+ }
+
+.chatboard{
+    display: flex;
+    flex-direction: column;
+    height:calc( 100vh - #{$header-height});
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title{
+    margin: 0;
+    &__text{
+        margin:0;
+        font-size: 18px;
+        color: #363636;
+        font-weight: 800;
+        text-align: left;
+    }
+}
+

@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.textinput{
+    display: flex;
+    flex-direction: column;
+    height:80px;
+    box-sizing: border-box;
+}
+
+.input-text__wrapper{
+    display:flex;
+    flex:1 0 auto;
+}
+
+.input-text__field-wrapper{
+    display:flex;
+    flex: 1 0 auto;
+    align-items:center;
+}
+
+.input-text__field{
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    height: calc(#{$input-text-line-height}* 3);
+    line-height: $input-text-line-height;
+    width:100%;
+    overflow: auto;
+    padding: 2px 10px;
+    margin: 2px 10px;
+    background-color:#e6e3e35d;
+}
+.input-text__field:focus{
+    outline: none;
+}
+
+.input-text__field::-webkit-scrollbar {
+   background-color:#cbcbcb;
+   width: 6px;
+   border-radius:4px;
+}
+
+.input-text__field::-webkit-scrollbar-thumb{
+    background-color:rgb(119, 116, 116);
+    width: 5px;
+    border-radius: 12px;
+ }
+
+.input-text__button{
+    display:flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+    height:80px;
+    width:80px;
+}
+
+.input-text__image{
+    height:50px;
+}
